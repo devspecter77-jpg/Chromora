@@ -1,162 +1,105 @@
-# Room Design Preview
+# Chromora - Real-time Xona Dizayn Muharriri
 
-A modern web application that allows users to visualize wall colors on their room images before painting. Built with React, Vite, and Tailwind CSS.
+Chromora - bu zamonaviy web ilova bo'lib, foydalanuvchilarga xona rasmlarida devor ranglarini real vaqtda ko'rish imkonini beradi.
 
-## Features
+## 🎨 Asosiy Xususiyatlar
 
-### 🎨 Core Functionality
-- **Image Upload**: Drag & drop or click to upload room images
-- **Color Overlay**: Apply semi-transparent color overlays with adjustable opacity
-- **Brush Tool**: Paint specific areas with customizable brush sizes
-- **Eraser Tool**: Remove painted areas with precision
-- **Real-time Preview**: Instant visual feedback as you make changes
-- **High-Quality Export**: Download edited images in PNG format
+- **Real-time Kamera**: Kamera orqali xonangizni ko'ring va devorlarni darhol bo'yang
+- **Interaktiv Rasm Bo'yash**: Yuklangan rasmlarda aniq devorlarni bo'yang
+- **Professional Vositalar**: Cho'tka, o'chirg'ich, rang tanlash
+- **Mobil Optimallashtirilgan**: Barcha qurilmalarda mukammal ishlaydi
+- **Yuqori Sifat**: PNG formatda professional natijalar
 
-### 🖥️ User Interface
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-- **Modern UI**: Clean, glassmorphism-inspired design
-- **Intuitive Controls**: Easy-to-use color picker, opacity slider, and brush controls
-- **Undo/Redo**: Full history management for all edits
-- **Quick Actions**: Reset, download, and mode switching
+## 🚀 Texnologiyalar
 
-### 📱 Mobile Optimized
-- Touch-friendly brush controls
-- Responsive layout (sidebar on desktop, bottom panel on mobile)
-- Optimized canvas interactions for touch devices
-
-## Tech Stack
-
-- **Frontend**: React 18 with Vite
+- **Frontend**: React 18 + Vite
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
 - **Routing**: React Router DOM
-- **Canvas**: HTML5 Canvas API for image manipulation
+- **Canvas**: HTML5 Canvas API
 
-## Getting Started
+## 📱 Responsive Dizayn
 
-### Prerequisites
-- Node.js 16+ 
-- npm or yarn
+- Mobil qurilmalar uchun optimallashtirilgan
+- Touch events qo'llab-quvvatlash
+- Adaptive layout va UI elementlari
+- Cross-platform compatibility
 
-### Installation
+## 🛠️ O'rnatish va Ishga Tushirish
 
-1. Clone the repository:
+### Lokal Development
+
 ```bash
-git clone <repository-url>
-cd room-design-preview
-```
-
-2. Install dependencies:
-```bash
+# Dependencies o'rnatish
 npm install
-```
 
-3. Start the development server:
-```bash
+# Development server
 npm run dev
-```
 
-4. Open your browser and navigate to `http://localhost:5173`
-
-### Building for Production
-
-```bash
+# Production build
 npm run build
+
+# Preview build
+npm run preview
 ```
 
-The built files will be in the `dist` directory.
+### Railway Deployment
 
-## Deployment
+1. **GitHub Repository**: Loyihani GitHub'ga push qiling
+2. **Railway Connect**: Railway.app da GitHub repository'ni ulang
+3. **Auto Deploy**: Railway avtomatik build va deploy qiladi
+4. **Custom Domain**: Kerak bo'lsa custom domain qo'shing
 
-### Vercel (Recommended)
+### Docker Deployment
 
-1. Install Vercel CLI:
 ```bash
-npm i -g vercel
+# Docker image build qilish
+docker build -t chromora .
+
+# Container ishga tushirish
+docker run -p 4173:4173 chromora
 ```
 
-2. Deploy:
-```bash
-vercel
-```
+## 🌐 Production URL
 
-3. Follow the prompts to configure your deployment.
+Railway deployment URL: `https://your-app.railway.app`
 
-### Alternative Deployment Options
+## 📋 Deployment Checklist
 
-- **Netlify**: Drag and drop the `dist` folder to Netlify
-- **GitHub Pages**: Use GitHub Actions to deploy the `dist` folder
-- **AWS S3**: Upload the `dist` folder to an S3 bucket with static hosting
+- ✅ Responsive dizayn (mobil + desktop)
+- ✅ Touch events qo'llab-quvvatlash
+- ✅ Production optimizatsiya
+- ✅ Docker containerization
+- ✅ Railway deployment config
+- ✅ Error handling
+- ✅ Performance optimization
 
-## Usage Guide
+## 🎯 Qanday Ishlaydi
 
-### 1. Upload an Image
-- Click "Start Designing" on the home page
-- Upload a room image by dragging and dropping or clicking the upload area
-- Supported formats: JPG, PNG, WebP (up to 10MB)
+### Real-time Kamera Rejimi
+1. Kamerani yoqing
+2. Cho'tka yoki o'chirg'ich tanlang
+3. Devorlarni to'g'ridan-to'g'ri bo'yang
+4. Suratga oling va saqlang
 
-### 2. Choose Your Mode
-- **Overlay Mode**: Apply color to the entire visible area
-- **Brush Mode**: Paint specific areas with precision
+### Rasm Bo'yash Rejimi
+1. Xona rasmini yuklang
+2. Vositalarni tanlang
+3. Aniq devorlarni bo'yang
+4. Natijani yuklab oling
 
-### 3. Customize Colors
-- Use the color picker or select from preset colors
-- Adjust opacity with the slider (1-100%)
-- Preview your changes in real-time
+## 🔧 Texnik Ma'lumotlar
 
-### 4. Use Brush Tools (Brush Mode)
-- Select brush or eraser tool
-- Adjust brush size (1-100px)
-- Paint or erase specific areas
-- Use undo/redo for corrections
+- **Node.js**: 18+
+- **Browser Support**: Chrome 80+, Firefox 75+, Safari 13+, Edge 80+
+- **Mobile**: iOS Safari, Android Chrome
+- **Performance**: Optimized canvas rendering
+- **Security**: HTTPS required for camera access
 
-### 5. Export Your Design
-- Click the download button to save your edited image
-- Images are exported in high-quality PNG format
+## 📞 Qo'llab-quvvatlash
 
-## Project Structure
+Savollar yoki muammolar uchun: hello@chromora.com
 
-```
-src/
-├── components/
-│   ├── BrushControls.jsx    # Brush size and tool controls
-│   ├── Canvas.jsx           # Main canvas component with drawing logic
-│   ├── ColorControls.jsx    # Color picker and opacity controls
-│   └── ImageUpload.jsx      # File upload component
-├── pages/
-│   ├── EditorPage.jsx       # Main editor interface
-│   └── HomePage.jsx         # Landing page with features and pricing
-├── App.jsx                  # Main app component with routing
-├── index.css               # Global styles and Tailwind imports
-└── main.jsx                # React app entry point
-```
+---
 
-## Performance Optimizations
-
-- **Canvas Layering**: Separate canvases for base image, overlay, and brush strokes
-- **Efficient Rendering**: Only re-render when necessary
-- **Image Optimization**: Automatic resizing to optimal canvas dimensions
-- **Memory Management**: Proper cleanup of canvas contexts and event listeners
-
-## Browser Support
-
-- Chrome 80+
-- Firefox 75+
-- Safari 13+
-- Edge 80+
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Commit your changes: `git commit -am 'Add feature'`
-4. Push to the branch: `git push origin feature-name`
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Support
-
-For support, email hello@roompreview.com or create an issue in the repository.# Chromora
+**Chromora** - Xonangizni real vaqtda ko'ring va bo'yang! 🎨# Chromora
