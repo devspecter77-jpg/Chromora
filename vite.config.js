@@ -10,7 +10,7 @@ export default defineConfig({
   },
   preview: {
     host: '0.0.0.0',
-    port: 4173
+    port: process.env.PORT || 4173
   },
   server: {
     host: '0.0.0.0',
