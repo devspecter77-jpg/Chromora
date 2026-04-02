@@ -2,7 +2,8 @@
 cmds = ["npm ci", "npm run build"]
 
 [phases.start]
-cmd = "npm start"
+cmd = "npm run preview"
 
 [variables]
 NODE_ENV = "production"
+PORT = "8080"
