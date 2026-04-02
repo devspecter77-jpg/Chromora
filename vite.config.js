@@ -6,11 +6,11 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: 'terser'
+    minify: 'esbuild'
   },
   preview: {
     host: '0.0.0.0',
-    port: process.env.PORT || 4173
+    port: parseInt(process.env.PORT) || 4173
   },
   server: {
     host: '0.0.0.0',
