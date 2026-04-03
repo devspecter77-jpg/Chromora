@@ -20,4 +20,4 @@ RUN npm run build
 EXPOSE $PORT
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["node", "server.js"]

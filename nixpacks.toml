@@ -2,7 +2,7 @@
 cmds = ["npm ci", "npm run build"]
 
 [phases.start]
-cmd = "npm start"
+cmd = "node server.js"
 
 [variables]
 NODE_ENV = "production"
